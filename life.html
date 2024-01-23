@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/boxicons/2.0.7/css/boxicons.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <title>Boost Wellness Clinic</title>
+  <link rel="icon" href="images/6.png" type="image/png">  
+  <style>
+    /* Adjust the margin-bottom for the links in the navbar */
+.navbar-nav .nav-item {
+    margin-bottom: 5px; /* You can adjust this value as needed */
+}
+
+@media (max-width: 767px) {
+    .navbar-nav .nav-item {
+        margin-bottom: 10px;
+    }
+}
+
+    .navbar {
+      padding: 20px;
+    }
+    /* Add this CSS to align the logo and links in the navbar */
+.navbar-brand {
+    margin-right: auto;
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-toggler {
+    margin-left: auto;
+}
+
+@media (max-width: 767px) {
+    .navbar-nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-nav .nav-item {
+        margin-bottom: 10px;
+    }
+}
+
+
+    @media (min-width: 992px) {
+      /* Only apply styles for big screens (≥ 992px) */
+      .navbar-brand {
+        margin-left: 10%;
+      }
+
+      .navbar-nav {
+        margin-right: 70px;
+      }
+
+      .content .container {
+    gap: 200px;
+  }
+    }
+
+    .navbar-brand {
+      margin-right: 50px; /* Adjust as needed */
+    }
+
+    .navbar-toggler {
+      margin-left: auto;
+    }
+
+    @media (max-width: 767px) {
+      .navbar-toggler {
+        margin-left: 0;
+        margin-right: 0;
+      }
+
+      .navbar-brand {
+        margin-right: auto;
+      }
+
+      .navbar-nav {
+        flex-direction: column;
+      }
+
+      .navbar-nav .nav-item {
+        margin-bottom: 10px;
+      }
+    }
+
+ .content .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 140px;
+  min-height: calc(80vh - 100px);
+}
+@media (max-width: 767px) {
+ .content .container {
+    gap: 0;
+    min-height: calc(80vh - 100px);
+    justify-content: center;
+    flex-direction: column-reverse;
+  }
+}
+@media (max-width: 767px) {
+ .content .info {
+    text-align: center;
+    margin-bottom: 15px 
+  }
+}
+ .content .info h1 {
+  color: #5d5d5d;
+  font-size: 44px;
+}
+ .content .info p {
+  margin: 0;
+  line-height: 1.6;
+  font-size: 15px;
+  color: #5d5d5d;
+}
+ .content .info button {
+  border: 0;
+  border-radius: 20px;
+  padding: 12px 30px;
+  margin-top: 30px;
+  cursor: pointer;
+  color: #FFF;
+  background-color: #6c63ff;
+}
+.landing-page .content .image img {
+  max-width: 100%;
+}
+
+.teal-shadow {
+    position: relative;
+    overflow: hidden;
+    background-color: #14A098; /* Teal color */
+    border-radius: 50%;
+    width: 100px; /* Adjust the width to match the image width */
+    height: 100px; /* Adjust the height to match the image height */
+    margin: 0 auto; /* Center the image horizontally */
+  }
+
+  .teal-shadow img {
+    width: 100%;
+    display: block;
+    border-radius: 50%;
+    margin-top: 10px; /* Adjust the top margin as needed */
+  }
+
+  @media (min-width: 768px) {
+    .teal-shadow::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      box-shadow: 0 4px 8px rgba(0, 128, 128, 0.5); /* Adjust opacity as needed */
+      border-radius: 50%;
+    }
+  }
+
+  .text-column {
+    text-align: left;
+    padding: 20px;
+  }
+
+  @media (max-width: 767px) {
+    .text-column,
+    .image-column {
+      margin-bottom: 20px;
+    }
+  }
+
+  footer {
+      background-color: #000;
+      color: #fff;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .footer-icons {
+      display: flex;
+      margin-top: 10px;
+      margin-right: 22vw;
+    }
+
+    .footer-icons a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    @media (max-width: 768px) {
+      .footer-icons, .copyright {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+      .footer-icons {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<style>
+		
+    .nav-link:hover {
+      color: green !important;
+      text-decoration: underline;
+      text-decoration-color: green;
+    }
+    .underline-on-hover:hover {
+      text-decoration: underline;
+      text-decoration-color: green;
+      color: green;
+    }
+    
+    .logo-image {
+      display: block;
+        margin-left: auto;
+        margin-right: auto;
+      width: 150px;
+    }
+    
+    
+    .navbar-nav {
+        float:none;
+        margin:0 auto;
+        display: block;
+        text-align: center;
+    }
+    .navbar-nav li {
+        display: inline-block;
+        float: none;
+      font-size: 14px;
+    }
+    .navbar-nav a {
+      transition: transform .3s !important;
+      backface-visibility: hidden;
+    }
+    .navbar-nav li:last-child {
+      border: none;
+    }
+    .dropdown-menu li {
+      border: none;
+    }
+    .dropdown-menu a {
+      display: block;
+    }
+    /* See if you can target all but the last nav-link with the class above and below. */
+    .navbar-nav a:hover {
+        color: #228B22;
+      text-decoration: none;
+      transform: scale(1.1)!important;
+    }
+    .dropdown-menu a:hover {
+      color: #228B22 !important;
+      transform: none !important;
+    }
+    .navbar-nav i:hover {
+      background-color: green !important;
+      border-width: 0 2px 2px 0;
+      transform: scale(1.2)!important;
+    }
+    #main-body {
+      background-color: red;
+    }
+    /* See what you can do to edit the color upon hover i class. */
+    .active {
+      color: teal;
+      text-decoration: underline;
+      text-decoration-color: teal;
+    }
+    #Header p {
+      text-align: right;
+    }
+    @media (max-width: 767px) {
+            .logo-link {
+                order: -1;
+            }
+      }
+        
+      </style>	
+    
+    
+
+<section id="Header">
+    <a href="index.html" class="logo-link"><img src="images/646.png" class="logo-image" id="top" style="width: 250px; height: 120px;"></a>
+</section>
+
+<section id="navigationBar">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+      <li class="nav-item  px-2">
+	  <a class="nav-link" href="index.html" style="color: #14A098;font-family: 'PT Serif', serif;  font-size: 20px;">Home </a>
+      </li>
+	
+	  <li class="nav-item px-2">
+	 <a class="nav-link" href="about.html"  style="color: #14A098; font-family: 'PT Serif', serif; font-size: 20px;">About</a>
+</li>
+	<li class="dropdown">
+		<a href="#" class="nav-link  active droptown-toggle" data-toggle="dropdown" id="navbarDropdownLink" aria-haspopup="true" aria-expanded="true" style="color: #14A098; font-family: 'PT Serif', serif; font-size: 20px;">Services<span class="sr-only">(current)</span> <i class="arrow down"></i></a>
+		
+    <ul class="dropdown-menu">
+			<li>  <a class="dropdown-item" href="medical.html" style="color: #14A098; font-family: 'PT Serif', serif; font-size: 20px; font-weight: bold;">Medical Weight Loss</a>		</li><br>
+			<li>  <a class="dropdown-item" href="life.html" style="color: #14A098; font-family: 'PT Serif', serif; font-size: 20px; font-weight: bold;">Lifestyle Medicine</a></li><br>
+			<li>  <a class="dropdown-item" href="nutri.html" style="color: #14A098; font-family: 'PT Serif', serif; font-size: 20px; font-weight: bold;">Nutritional Therapy</a></li><br>
+      <li>  <a class="dropdown-item" href="hormonetherapy.html" style="color: #14A098; font-family: 'PT Serif', serif; font-size: 20px; font-weight: bold;">Hormone Therapy</a></li><br>
+
+		</ul>
+	</li>
+	
+    <li class="nav-item px-2">
+	 <a class="nav-link" href="contact.html"  style="color: #14A098; font-family: 'PT Serif', serif;  font-size: 20px;">Contact</a>
+	</li>
+	<li class="nav-item px-2">
+	 <a class="nav-link" href="blog.html"  style="color: #14A098; font-family: 'PT Serif', serif;  font-size: 20px;">Blogs</a>
+	</li>
+	<li class="nav-item px-2">
+	<button class="btn" style="border-radius: 100px; color: #14A098; background-color: silver; font-family: 'PT Serif', serif; font-weight: bold; margin-left: 20px; margin-top: 4px;">Book An Appointment</button>
+	</li>
+    
+
+
+</nav>
+  </section>
+
+
+
+
+<div class="hero-container">
+        <div class="container">
+            <div class="hero-text">
+    </div>
+        </div>
+</div>
+
+<style>
+    body {
+        margin: 0;
+    }
+
+    .hero {
+        display: flex;
+        flex-direction: column;
+        background-image: url("images/78.png");
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 50%;
+        align-items: left;
+        justify-content: center;
+        height: 70vh; /* Set the height to 100% of the viewport height */
+        margin-left: 10%; /* Set left margin to 10% */
+        margin-right: 10%; /* Set right margin to 10% */
+
+        @media (max-width: 767px) {
+            margin-left: 0; /* Set left margin to 0 for small screens */
+            margin-right: 0; /* Set right margin to 0 for small screens */
+        }
+    }
+
+    .text p {
+        font-family: 'Cabin', sans-serif;
+        color: black;
+        text-shadow: 2px 2px 4px white, -2px -2px 4px white, 2px -2px 4px white, -2px 2px 4px white;
+        background: white;
+        padding: 10px;
+        -webkit-background-clip: text;
+        background-clip: text;
+    }
+
+    .text h1 {
+        color: #14A098;
+        font-family: 'PT Serif', serif;
+        -webkit-text-stroke: 2px white;
+        background-clip: text;
+    }
+
+    .hero-container {
+    position: relative;
+    text-align: center;
+    color: #fff;
+    height: 400px;  
+    margin-left: 10%; /* Set left margin to 10% */
+        margin-right: 10%; /* Set right margin to 10% */
+    padding: 100px 0; /* Adjust the top and bottom padding as needed */
+    background: url("images/78.png") center center no-repeat;
+    background-size: cover;
+}
+
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 2px 2px 4px white, -2px -2px 4px white, 2px -2px 4px white, -2px 2px 4px white;
+}
+
+
+    .text {
+        font-size: 1.4rem;
+        text-align: left;
+        margin-left: 2vw;
+        width: 100%;
+        padding-left: 2%;
+    }
+
+    @media (min-width: 768px) {
+        .text {
+            text-align: left;
+            padding-left: 8%;
+        }
+
+        .text h1 {
+            color: #14A098;
+            font-family: 'PT Serif', serif;
+            -webkit-text-stroke: 2px white;
+            background-clip: text;
+        }
+    }
+</style>
+
+
+
+
+
+        <div class="container mt-4">
+
+  <div class="row">
+
+    <!-- Single Column -->
+<div class="mb-4">
+  <div class="container mt-5">
+    <h4 style="font-family: 'PT Serif', serif; font-size: 25px;color: #14A098;">Why Lifestyle Medicine?</h4>
+
+    <p style="font-family: 'Cabin', sans-serif;">At Boost Wellness Clinic, we believe that the key to good health and wellness lies in the choices we make every day. Lifestyle Medicine is an innovative approach that uses evidence-based lifestyle interventions to treat, prevent, and often reverse chronic diseases. Chronic diseases such as heart disease, hypertension, type 2 diabetes, fatty liver disease, and obesity have become increasingly prevalent, often due to lifestyle factors. Our Lifestyle Medicine program is dedicated to empowering you with the knowledge and tools to make transformative lifestyle changes, leading to a healthier, more fulfilling life.</p>
+    <br>
+    <h4 style="font-family: 'PT Serif', serif; font-size: 25px;color: #14A098;">The Six Pillars of Lifestyle Medicine at Boost Wellness Clinic</h4>
+
+    <ol style="font-family: 'Cabin', sans-serif;">
+      <li>
+        <strong>Nutritious Eating:</strong> Enjoy a whole food, plant-rich diet that nourishes and heals, helping you prevent and reverse chronic conditions.
+      </li>
+      <li>
+        <strong>Active Living:</strong> Our customized fitness plans enhance both your physical and mental health, tailored to your lifestyle.
+      </li>
+      <li>
+        <strong>Rejuvenating Sleep:</strong> Learn healthy sleep habits for improved mental clarity and physical health.
+      </li>
+      <li>
+        <strong>Stress Management:</strong> Discover stress reduction techniques, from mindfulness to relaxation, for a more balanced life.
+      </li>
+      <li>
+        <strong>Avoiding Risky Substances:</strong> We support you in reducing harmful substances like tobacco and alcohol, empowering your wellbeing.
+      </li>
+      <li>
+        <strong>Positive Social Connections:</strong> Engage in enriching relationships and social activities that boost your mental and emotional health.
+      </li>
+    </ol>
+
+    <h4 style="font-family: 'PT Serif', serif; font-size: 25px;color: #14A098;">Ready to Begin?</h4>
+
+    <p style="font-family: 'Cabin', sans-serif;">Ready to take control of your health and embrace a new lifestyle? Contact Boost Wellness Clinic to start your journey with Lifestyle Medicine. Let us help you unlock your potential for a healthier, happier life.</p>
+
+    <button type="button" class="btn btn mt-3" style="background-color: #14a098; border-radius: 30px;">Contact Us</button>
+  </div>
+</div>
+
+
+  </div>
+  <br><br>
+<h2 style="font-family: 'PT Serif', serif; font-size: 25px; color: #14A098;">Frequently Asked Questions (FAQs) -</h2>
+  <br>
+<h3 style="font-family: 'PT Serif', serif; font-size: 23px; color: #14A098;">Q: What is lifestyle medicine?</h3>
+
+<p style="font-family: 'Cabin', sans-serif;">A: Lifestyle medicine is a medical approach that uses evidence-based practices to help individuals adopt
+and sustain healthier lifestyles. This includes addressing nutrition, physical activity, stress management,
+sleep, and environmental factors that influence health.</p>
+
+<br><br>
+<h3 style="font-family: 'PT Serif', serif; font-size: 23px; color: #14A098;">Q: What services does the Lifestyle Medicine Program offer?</h3>
+
+<p style="font-family: 'Cabin', sans-serif;">A: We offer personalized health assessments, nutritional counseling, fitness planning, stress reduction
+techniques, sleep hygiene advice, and chronic disease management. Our goal is to empower you with
+the tools and knowledge for a healthier lifestyle.</p>
+
+
+<br><br>
+<h3 style="font-family: 'PT Serif', serif; font-size: 23px; color: #14A098;">Q: Can lifestyle medicine help with chronic conditions?</h3>
+
+<p style="font-family: 'Cabin', sans-serif;">A: Absolutely. Lifestyle medicine can be highly effective in managing and even reversing certain chronic
+conditions like type 2 diabetes, heart disease, and obesity. It complements traditional medical
+treatments to improve overall health outcomes.</p>
+
+<br><br>
+<h3 style="font-family: 'PT Serif', serif; font-size: 23px; color: #14A098;">Q: Do I need a referral to visit the Lifestyle Medicine Program?</h3>
+
+<p style="font-family: 'Cabin', sans-serif;">A: A referral is not necessary. You can contact us directly to schedule an appointment.</p>
+
+
+
+<br><br>
+<h3 style="font-family: 'PT Serif', serif; font-size: 23px; color: #14A098;">Q: How is a plan personalized for me?</h3>
+
+<p style="font-family: 'Cabin', sans-serif;">A: Your plan is based on a comprehensive assessment that includes your medical history, lifestyle
+factors, and personal health goals. We then create a tailored plan that fits into your life and addresses
+your specific needs.</p>
+
+
+<br><br>
+<h3 style="font-family: 'PT Serif', serif; font-size: 23px; color: #14A098;">Q: Are your programs covered by insurance?</h3>
+
+<p style="font-family: 'Cabin', sans-serif;">A: Coverage varies by insurance provider and plan. We recommend checking with your insurance for
+coverage details. Our staff can also assist in understanding your benefits.</p>
+
+
+
+<br><br>
+<h3 style="font-family: 'PT Serif', serif; font-size: 23px; color: #14A098;">Q: How long does it take to see results?</h3>
+
+<p style="font-family: 'Cabin', sans-serif;">A: The timeline varies depending on individual goals and conditions. However, many clients start to see
+improvements in their health and well-being within a few weeks of making lifestyle changes.</p>
+
+
+
+<br><br>
+<h3 style="font-family: 'PT Serif', serif; font-size: 23px; color: #14A098;">Q: What qualifications do your staff have?</h3>
+
+<p style="font-family: 'Cabin', sans-serif;">A: Our team includes lifestyle medicine practitioner and health coaches, all dedicated to providing the
+highest standard of care.</p>
+
+
+<br><br>
+<h3 style="font-family: 'PT Serif', serif; font-size: 23px; color: #14A098;">Q: Can I continue seeing my regular doctor while attending the clinic?</h3>
+
+<p style="font-family: 'Cabin', sans-serif;">A: Yes, we encourage coordinated care. We can work alongside your regular healthcare provider to
+ensure a comprehensive approach to your health.</p>
+
+
+
+
+<br><br>
+<h3 style="font-family: 'PT Serif', serif; font-size: 23px; color: #14A098;">Q: How can I start with the Lifestyle Medicine Program?</h3>
+
+<p style="font-family: 'Cabin', sans-serif;">A: Simply contact us to schedule your initial consultation. We look forward to partnering with you on
+your journey to better health.</p>
+
+
+<br><br>
+<h3 style="font-family: 'PT Serif', serif; font-size: 23px; color: #14A098;">Have more questions?</h3>
+
+<p style="font-family: 'Cabin', sans-serif;">We're here to help. Reach out to Boost Wellness Clinic for more information or to begin your health
+transformation.</p>
+
+
+
+</div><br><br>
+
+</div>
+
+
+
+  <!-- Second Column -->
+  
+</div><br><br>
+
+</div>
+
+
+
+<footer class="text-light" style="background-color: #29817d; padding: 10px;">
+  <div class="container">
+    <div class="row text-center">
+
+      <!-- First Column -->
+      <div class="col-md-4 col-sm-12 mb-4 mx-auto" style="margin-top: 1vw; ">
+        <img src="images/808.png" alt="Your Logo" style="width: 170px; height: 75px;">
+        <br><br>
+        <p style="text-align: center; font-family: 'Cabin', sans-serif; color: black; ">7070 Knight Ct, suite 1004<br>
+          Missouri City, TX 77459<br>
+          <strong style="font-family: Kudryashev Display Sans; font-size: 15px; color: white;">Phone</strong><br>
+          281-410-2210<br>
+          <strong style="font-family: Kudryashev Display Sans; font-size: 15px; color: white;">Email</strong><br>
+          Info@boostwellnessclinic.com
+        </p>
+        <h5 style="font-family: Kudryashev Display Sans; font-size: 25px; color: white;">
+          <strong>Share & Connect</strong>
+        </h5>
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-instagram"></a>
+      </div>
+
+      <!-- Second Column -->
+      <div class="col-md-4 col-sm-12 mb-4 mx-auto" style="margin-top: 3.5vw; margin-bottom: 6vw;">
+        <h5 style="font-family: Kudryashev Display Sans; font-size: 25px; color: white; ">
+          <strong>Quick Links</strong>
+        </h5>
+        <ul class="list-unstyled" style="text-align: center;">
+        <li><a href="about.html" style="text-align: left; font-family: 'Cabin', sans-serif; color: black;">About</a></li>
+          <li><a href="blog.html" style="text-align: left; font-family: 'Cabin', sans-serif; color: black; ">Blog</a></li>
+          <li><a href="contact.html" style="text-align: left; font-family: 'Cabin', sans-serif; color: black;">Contact</a></li>
+          <li><a href="medical.html" style="text-align: left; font-family: 'Cabin', sans-serif; color: black; ">Medical Weight Loss</a></li>
+          <li><a href="life.html" style="text-align: left; font-family: 'Cabin', sans-serif; color: black; ">Lifestyle Medicine</a></li>
+          <li><a href="nutri.html" style="text-align: left; font-family: 'Cabin', sans-serif; color: black; ">IV Nutritional Therapy</a></li>
+          <li><a href="hormonetherapy.html" style="text-align: left; font-family: 'Cabin', sans-serif; color: black; ">Hormone Therapy</a></li>
+
+        </ul>   
+      </div>
+
+      <!-- Third Column -->
+      <div class="col-md-4 col-sm-12 mb-4 mx-auto" style="margin-top: 3.5vw">
+        <h5 style="font-family: Kudryashev Display Sans; font-size: 25px; color: white; ">
+          <strong>Business Hours</strong>
+        </h5>
+        <ul class="list-unstyled">
+          <li><a style="text-align: left; font-family: 'Cabin', sans-serif; color: black; ">By Appointment Only</a></li>
+          <li><a style="text-align: left; font-family: 'Cabin', sans-serif; color: black; ">Monday - CLOSED</a></li>
+          <li><a style="text-align: left; font-family: 'Cabin', sans-serif; color: black; ">Tuesday - CLOSED</a></li>
+          <li><a style="text-align: left; font-family: 'Cabin', sans-serif; color: black; ">Wednesday 9:00 am - 5:00 pm</a></li>
+          <li><a style="text-align: left; font-family: 'Cabin', sans-serif; color: black; ">Thursday - CLOSED</a></li>
+          <li><a style="text-align: left; font-family: 'Cabin', sans-serif; color: black; ">Friday 9:00 am - 5:00 pm</a></li>
+          <li><a style="text-align: left; font-family: 'Cabin', sans-serif; color: black; ">Saturday/Sunday - CLOSED</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</footer>
+
+
+
+
+  </div>
+  <style>
+    .fa {
+      padding: 5px; /* Adjusted padding for smaller icons */
+      font-size: 15px; /* Adjusted font size for smaller icons */
+      width: 35px; /* Adjusted width for smaller icons */
+      border-radius: 50%;
+      text-align: center;
+      text-decoration: none;
+      margin: 5px;
+    }
+
+    .fa:hover {
+      opacity: 0.7;
+    }
+
+    .fa-facebook {
+      background: teal;
+      color: white;
+    }
+
+    .fa-twitter {
+      background: teal;
+      color: white;
+    }
+
+    .fa-instagram {
+      background: teal;
+      color: white;
+    }
+
+    footer {
+      background-color: #14A098;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 5px;
+    }
+
+
+    @media (min-width: 768px) {
+      /* Adjustments for bigger screens */
+      .fa {
+        font-size: 30px;
+        width: 50px;
+      }
+
+   
+
+    }
+  </style>
+
+<script>
+    // JavaScript code to handle dropdown toggle
+    document.addEventListener("DOMContentLoaded", function () {
+        var dropdownToggle = document.querySelector('.dropdown-toggle');
+        var dropdownMenu = document.querySelector('.dropdown-menu');
+
+        dropdownToggle.addEventListener('click', function () {
+            dropdownMenu.classList.toggle('show');
+        });
+
+        document.addEventListener('click', function (event) {
+            if (!dropdownToggle.contains(event.target) && !dropdownMenu.contains(event.target)) {
+                dropdownMenu.classList.remove('show');
+            }
+        });
+    });
+</script>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+
+</body>
+</html>

@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="images/6.png" type="image/png">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/boxicons/2.0.7/css/boxicons.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kudryashev+Display+Contrast+Sans:wght@400;700&display=swap">
+  <!-- Include Bootstrap Icons CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link href="https://db.onlinewebfonts.com/c/384a6031928e262848e4e7ef80037466?family=Kudryashev+Display+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.17.0/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha384-c1KzZ4LTX2js3uPdTn8z9mn48bC5rAR2b20PzH7Vblf3RvuoDzvPP2a8pd2HqrVZ" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <title>Boost Wellness Clinic</title>
+  <style>
+   
+
+ .content .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 140px;
+  min-height: calc(80vh - 100px);
+}
+@media (max-width: 767px) {
+ .content .container {
+    gap: 0;
+    min-height: calc(80vh - 100px);
+    justify-content: center;
+    flex-direction: column-reverse;
+  }
+}
+@media (max-width: 767px) {
+ .content .info {
+    text-align: center;
+    margin-bottom: 15px 
+  }
+}
+ .content .info h1 {
+  color: #5d5d5d;
+  font-size: 44px;
+}
+ .content .info p {
+  margin: 0;
+  line-height: 1.6;
+  font-size: 15px;
+  color: #5d5d5d;
+}
+ .content .info button {
+  border: 0;
+  border-radius: 20px;
+  padding: 12px 30px;
+  margin-top: 30px;
+  cursor: pointer;
+  color: #FFF;
+  background-color: #6c63ff;
+}
+.landing-page .content .image img {
+  max-width: 100%;
+}
+
+.teal-shadow {
+    position: relative;
+    overflow: hidden;
+    background-color: #14A098; /* Teal color */
+    border-radius: 50%;
+    width: 100px; /* Adjust the width to match the image width */
+    height: 100px; /* Adjust the height to match the image height */
+    margin: 0 auto; /* Center the image horizontally */
+  }
+
+  .teal-shadow img {
+    width: 100%;
+    display: block;
+    border-radius: 50%;
+    margin-top: 10px; /* Adjust the top margin as needed */
+  }
+
+  @media (min-width: 768px) {
+    .teal-shadow::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      box-shadow: 0 4px 8px rgba(0, 128, 128, 0.5); /* Adjust opacity as needed */
+      border-radius: 50%;
+    }
+  }
+
+  .text-column {
+    text-align: left;
+    padding: 20px;
+  }
+
+  @media (max-width: 767px) {
+    .text-column,
+    .image-column {
+      margin-bottom: 20px;
+    }
+  }
+
+  footer {
+      background-color: #000;
+      color: #fff;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .footer-icons {
+      display: flex;
+      margin-top: 10px;
+      margin-right: 22vw;
+    }
+
+    .footer-icons a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    @media (max-width: 768px) {
+      .footer-icons, .copyright {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+      .footer-icons {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<style>
+		
+    .nav-link:hover {
+      color: green !important;
+      text-decoration: underline;
+      text-decoration-color: green;
+    }
+    .underline-on-hover:hover {
+      text-decoration: underline;
+      text-decoration-color: green;
+      color: green;
+    }
+    
+    .logo-image {
+      display: block;
+        margin-left: auto;
+        margin-right: auto;
+      width: 150px;
+    }
+    
+    
+    .navbar-nav {
+        float:none;
+        margin:0 auto;
+        display: block;
+        text-align: center;
+    }
+    .navbar-nav li {
+        display: inline-block;
+        float: none;
+      font-size: 14px;
+    }
+    .navbar-nav a {
+      transition: transform .3s !important;
+      backface-visibility: hidden;
+    }
+    .navbar-nav li:last-child {
+      border: none;
+    }
+    .dropdown-menu li {
+      border: none;
+    }
+    .dropdown-menu a {
+      display: block;
+    }
+    /* See if you can target all but the last nav-link with the class above and below. */
+    .navbar-nav a:hover {
+        color: #228B22;
+      text-decoration: none;
+      transform: scale(1.1)!important;
+    }
+    .dropdown-menu a:hover {
+      color: #228B22 !important;
+      transform: none !important;
+    }
+    .navbar-nav i:hover {
+      background-color: green !important;
+      border-width: 0 2px 2px 0;
+      transform: scale(1.2)!important;
+    }
+    #main-body {
+      background-color: red;
+    }
+    /* See what you can do to edit the color upon hover i class. */
+    .active {
+      color: teal;
+      text-decoration: underline;
+      text-decoration-color: teal;
+    }
+    #Header p {
+      text-align: right;
+    }
+    @media (max-width: 767px) {
+            .logo-link {
+                order: -1;
+            }
+      }
+        
+      </style>	
+    
+    
+
+<section id="Header">
+    <a href="#" class="logo-link"><img src="images/646.png" class="logo-image" id="top" style="width: 250px; height: 120px;"></a>
+</section>
+
+<section id="navigationBar">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+      <li class="nav-item active px-2">
+	  <a class="nav-link" href="#" style="color: #14A098;font-family: 'PT Serif', serif;  font-size: 20px;">Home <span class="sr-only">(current)</span></a>
+      </li>
+	
+	  <li class="nav-item px-2">
+	 <a class="nav-link" href="about.html"  style="color: #14A098; font-family: 'PT Serif', serif; font-size: 20px;">About</a>
+</li>
+	<li class="dropdown">
+		<a href="#" class="nav-link droptown-toggle" data-toggle="dropdown" id="navbarDropdownLink" aria-haspopup="true" aria-expanded="true" style="color: #14A098; font-family: 'PT Serif', serif; font-size: 20px;">Services <i class="arrow down"></i></a>
+		
+		<ul class="dropdown-menu">
+			<li>  <a class="dropdown-item" href="medical.html" style="color: #14A098; font-family: 'PT Serif', serif; font-size: 20px; font-weight: bold;">Medical Weight Loss</a>		</li><br>
+			<li>  <a class="dropdown-item" href="life.html" style="color: #14A098; font-family: 'PT Serif', serif; font-size: 20px; font-weight: bold;">Lifestyle Medicine</a></li><br>
+			<li>  <a class="dropdown-item" href="nutri.html" style="color: #14A098; font-family: 'PT Serif', serif; font-size: 20px; font-weight: bold;">Nutritional Therapy</a></li><br>
+      <li>  <a class="dropdown-item" href="hormonetherapy.html" style="color: #14A098; font-family: 'PT Serif', serif; font-size: 20px; font-weight: bold;">Hormone Therapy</a></li><br>
+
+		</ul>
+	</li>
+	
+    <li class="nav-item px-2">
+	 <a class="nav-link" href="contact.html"  style="color: #14A098; font-family: 'PT Serif', serif;  font-size: 20px;">Contact</a>
+	</li>
+	<li class="nav-item px-2">
+	 <a class="nav-link" href="blog.html"  style="color: #14A098; font-family: 'PT Serif', serif;  font-size: 20px;">Blogs</a>
+	</li>
+	<li class="nav-item px-2">
+	<button class="btn" style="border-radius: 100px; color: #14A098; background-color: silver; font-family: 'PT Serif', serif; font-weight: bold; margin-left: 20px; margin-top: 4px;">Book An Appointment</button>
+	</li>
+    
+
+
+</nav>
+  </section>
+
+  <div style="margin-left: 5%; margin-right: 5%; text-align: center;">
+    <img src="images/im8.png" style="max-width: 100%; height: auto; margin-left: auto; margin-right: auto;">
+  </div>
+  
+  
+  
+  
+  
+
+<br>
+<br>
+<h2 style="font-family: 'PT Serif', serif; font-size: 38px; color: #14A098; text-align: center;">Empower, Transform, Thrive</h2>
+<p style="font-family: 'PT Serif', serif; font-size: 30px; color: #14A098; text-align: center;">Your Wellness Journey Starts Here at Boost Wellness Clinic.</p>
+<br><br>
+
+<div class="parallax-container">
+  <div class="parallax" style="background-image: url('https://assets-global.website-files.com/5fd923d0e6a54cb58ac2acc8/648b8eec95c0e7b81ccff684_GreenTexture.webp');"></div>
+  <div class="content">
+      <!-- Your content goes here -->
+      <div style="margin-left: 10%; margin-right: 10%;">
+          <h2 style="font-family: 'PT Serif', serif; font-size: 30px; color: black; text-align: center;">Who We Are</h2>
+          <p style="text-align: center; font-family: 'Cabin', sans-serif; font-size: 20px;">At Boost Wellness Clinic, we blend the principles of lifestyle medicine with a targeted approach to medical weight loss. Here, we don't just focus on shedding pounds; we aim to enhance your overall well-being.</p>
+
+          <br>
+
+          <h2 style="font-family: 'PT Serif', serif; font-size: 30px; color: black; text-align: center;">Our Approach</h2>
+          <p style="text-align: center; font-family: 'Cabin', sans-serif; font-size: 20px;">At Boost Wellness Clinic, we understand that weight management is a complex journey influenced by a variety of factors. We believe that sustainable weight loss starts with understanding the underlying reasons for weight gain. Our approach involves exploring factors like metabolic health, hormonal imbalances, lifestyle habits, and emotional well-being to create a comprehensive and effective plan for you. By combining lifestyle medicine with FDA-approved medications, we create an approach that's as unique as you are.</p>
+      </div>
+  </div>
+</div>
+
+</div>
+<div style="background-image: url('https://png.pngtree.com/background/20210715/original/pngtree-green-literary-small-fresh-watercolor-flower-background-picture-image_1273540.jpg'); background-size: cover; background-position: center; width: auto; height: 1000px; ">
+
+
+<h5 class="card-title" style="text-align: center; font-family: 'PT Serif', serif; font-size: 38px; color: #14A098;">Our Amazing Services</h5>
+
+
+<br><br>
+<div style="margin-left: 10%; margin-right: 10%;">
+  <h2 style="font-family: 'PT Serif', serif; font-size: 25px; color: #14A098; text-align: center;">Meal Plans   </h2>
+  <p style="text-align: center; font-family: 'Cabin', sans-serif; font-size: 20px;">We provide customized nutritional plans addressing dietary needs and preferences and ensuring a balanced intake for optimal health and weight management.</p>
+  
+  <br>
+  
+  <h2 style="font-family: 'PT Serif', serif; font-size: 25px; color: #14A098; text-align: center;">Exercise Plans</h2>
+  <p style="text-align: center; font-family: 'Cabin', sans-serif; font-size: 20px;">Our clinic offers diverse fitness programs, including personal training, group classes, and specialized exercise plans, all designed to enhance weight loss and promote physical well-being. </p>
+ 
+  <br>
+
+  <h2 style="font-family: 'PT Serif', serif; font-size: 25px; color: #14A098; text-align: center;">Behavioral and Lifestyle Coaching </h2>
+  <p style="text-align: center; font-family: 'Cabin', sans-serif; font-size: 20px;">Understanding the psychological aspects of eating and weight management is crucial. Our coach services focus on behavior modification, stress management, and developing healthy lifestyle habits. </p>
+  
+  <br>
+
+  <h2 style="font-family: 'PT Serif', serif; font-size: 25px; color: #14A098; text-align: center;">Advanced Medical Weight Loss Solutions:   </h2>
+  <p style="text-align: center; font-family: 'Cabin', sans-serif; font-size: 20px;">We utilize FDA-approved medications and other medical interventions as part of our comprehensive weight management strategy, ensuring safe and effective treatment under professional supervision. </p>
+  <br>
+
+  <h2 style="font-family: 'PT Serif', serif; font-size: 25px; color: #14A098; text-align: center;">Hormonal Balance and Metabolic Health Assessments   </h2>
+  <p style="text-align: center; font-family: 'Cabin', sans-serif; font-size: 20px;">Our team evaluates hormonal and metabolic factors that may influence weight, providing treatments and recommendations to address these underlying issues.  </p>
+  
+
+  <br>
+  <h2 style="font-family: 'PT Serif', serif; font-size: 25px; color: #14A098; text-align: center;">Nutritional Deficiency Analysis and Correction   </h2>
+  <p style="text-align: center; font-family: 'Cabin', sans-serif; font-size: 20px;">We assess and correct nutritional deficiencies, understanding their role in weight management and overall health. 
+
+  </p>
+  
+</div>
+</div>
+<!-- 
+
+
+<div class="container mt-4" style="margin-top: -10vw;">
+    <div class="row" style="margin-top: 5.5vw;">
+
+        <div class="col-md-4 mb-4">
+            <div class="card border-0">
+                <div class="teal-shadow text-center">
+                    <img src="https://columbustclinic.com/wp-content/themes/ctc-duffs-theme/img/icon-step-1@2x.png" class="card-img-top" alt="Image 1" style="width: 100px;">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title" style="text-align: center; font-family: 'PT Serif', serif; font-size: 28px; color: #14A098;">Medical Weight Loss</h5>
+                    <p class="card-text" style="text-align: center; font-family: 'Cabin', sans-serif;">Losing weight is hard, don't do it alone. Our weight management program is robust and guaranteed to give you results.</p>
+                    <a href="medical.html" style="text-decoration: none; color: #14A098;">
+                        <button class="btn d-block mx-auto" style="border-radius: 100px; background-color: silver; color: #14A098; font-family: 'PT Serif', serif;">Learn More</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card border-0">
+                <div class="teal-shadow text-center">
+                    <img src="https://columbustclinic.com/wp-content/themes/ctc-duffs-theme/img/icon-step-1@2x.png" class="card-img-top" alt="Image 2" style="width: 100px;">
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title" style="text-align: center; font-family: 'PT Serif', serif; font-size: 28px; color: #14A098;">Nutritional Therapy</h5>
+                  <p class="card-text" style="text-align: center; font-family: 'Cabin', sans-serif;">For immediate and rapid absorption of the required medicine into your bloodstream, we have professionals who administer intramuscular injections safely.</p>
+                  <a href="nutri.html" style="text-decoration: none; color: #14A098;">
+                      <button class="btn d-block mx-auto" style="border-radius: 100px; background-color: silver; color: #14A098; font-family: 'PT Serif', serif;">Learn More</button>
+                  </a>
+              </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card border-0">
+                <div class="teal-shadow text-center">
+                    <img src="https://columbustclinic.com/wp-content/themes/ctc-duffs-theme/img/icon-step-1@2x.png" class="card-img-top" alt="Image 3" style="width: 100px;">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title" style="text-align: center; font-family: 'PT Serif', serif; font-size: 28px; color: #14A098;">Lifestyle Medicine</h5>
+                    <p class="card-text" style="text-align: center; font-family: 'Cabin', sans-serif;">Lifestyle Medicine is an innovative approach that uses evidence-based lifestyle
+interventions to treat, prevent, and often reverse chronic diseases.</p>
+                    <a href="life.html" style="text-decoration: none; color: #14A098;">
+                        <button class="btn d-block mx-auto" style="border-radius: 100px; background-color: silver; color: #14A098; font-family: 'PT Serif', serif;">Learn More</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</div>
+</div><br><br>
+
+
+ -->
+
+<br><br><br>
+<style>
+    .star-rating {
+      text-align: center;
+      color: #FFD700; /* Yellow color for stars */
+      font-size: 24px;
+    }
+  </style>
+<h2 style="text-align: center; font-family: 'PT Serif', serif; font-size: 30px; color: #14A098;">Testimonials</h2>
+<div class="container mt-5">
+  <div class="row">
+    <!-- Column 1 -->
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <div class="card-body">
+          <div class="star-rating">
+            &#9733;&#9733;&#9733;&#9733;&#9733; <!-- Five yellow stars -->
+          </div>
+          <p class="card-text" style="text-align: center; font-family: 'Cabin', sans-serif;">I'm so happy I have this place. The provider listened to me and took care of my health needs.</p>
+          <p style="text-align: center; font-family: 'PT Serif', serif; font-size: 24px; color: #14A098;">John Orelion</p>
+        </div>
+      </div>
+    </div>
+
+
+     <!-- Column 3 -->
+     <div class="col-md-4 mb-4">
+      <div class="card">
+        <div class="card-body">
+          <div class="star-rating">
+            &#9733;&#9733;&#9733;&#9733;&#9733; <!-- Five yellow stars -->
+          </div>
+          <p class="card-text" style="text-align: center; font-family: 'Cabin', sans-serif;">Amazing care, actually listens and isn't just a pill pushing machine. It's refreshing to have someone actually care and work on a customized plan for you personally.</p>
+          <p style="text-align: center; font-family: 'PT Serif', serif; font-size: 24px; color: #14A098;">Jessica Kearns</p>
+        </div>
+      </div>
+    </div>
+  
+
+
+    <!-- Column 2 -->
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <div class="card-body">
+          <div class="star-rating">
+            &#9733;&#9733;&#9733;&#9733;&#9733; <!-- Five yellow stars -->
+          </div>
+          <p class="card-text" style="text-align: center; font-family: 'Cabin', sans-serif;">Marie is doing a wonderful job. I lost 5 pounds in one week. I can't wait for her IV room for my IV drips.</p>
+          <p style="text-align: center; font-family: 'PT Serif', serif; font-size: 24px; color: #14A098;">Armin Deger</p>
+        </div>
+      </div>
+    </div>
+    </div>
+</div>
+   
+<div class="horizon" style="background-color: #E8F0F0">
+<div class="container mt-4">
+  <div class="row">
+    <!-- Text Column -->
+    <div class="col-md-6 mb-4 d-flex align-items-center">
+      <div class="text-column">
+        <h2 style="font-family: 'PT Serif', serif; font-size: 30px; color: #14A098;">Why Clients Trust Boost Wellness Clinic</h2>
+        <ul style=" font-family: 'Cabin', sans-serif;">
+    <li><strong>Expert Team:</strong> Highly qualified professionals committed to your health.</li>
+    <li><strong>Personalized Approach:</strong> Treatments tailored to your unique needs.</li>
+    <li><strong>Welcoming Space:</strong> You will feel comfortable and cared for from the moment you walk in.</li>
+    <li><strong>Modern Facilities:</strong> State-of-the-art equipment in a serene environment.</li>
+    <li><strong>Proven Results:</strong> A track record of helping clients achieve their wellness goals.</li>
+</ul>
+
+      </div>
+    </div>
+
+    <!-- Image Column -->
+    <div class="col-md-6 mb-4">
+      <div class="image-column" >
+
+       
+        <img src="images/46.png" alt="Sample Image" class="img-fluid" style="margin-top: 4vw;">
+       
+      </div>
+    </div>
+  </div>
+  </div>
+    <div class="container mt-4">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h3 style="font-family: 'PT Serif', serif; font-size: 30px; color: #14A098;">Latest from Our Blog</h3>
+            <p style=" font-family: 'Cabin', sans-serif;">Stay updated with the latest health tips, clinic news, and wellness trends from our team of experts.</p>
+            <button class="btn btn mt-3" style="font-family: 'Cabin', sans-serif; background-color: #14a098; border-radius: 30px;">
+        <a href="blog.html" style="text-decoration: none; color: white;">Read Our Blog</a>
+    </button>
+    <button class="btn btn-secondary ml-2 mt-3" style="font-family: 'Cabin', sans-serif; border-radius: 30px;">
+        <a href="your-appointment-url" style="text-decoration: none; color: white;">Schedule an Appointment</a>
+    </button>
+        </div>
+    </div>
+</div>
+<br><br>
+<br>
+  </div>
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h3 style="font-family: 'PT Serif', serif; font-size: 30px; color: #14A098;">Your Journey to Wellness Starts Here</h3>
+            <p style=" font-family: 'Cabin', sans-serif;">Ready to Begin? Starting your health journey at Boost Wellness Clinic is just a call or a click away.<br>
+Contact us to schedule your initial consultation and take the first step towards a healthier, happier you.<br><br><span style="font-size: 21px;"><strong>Boost Wellness Clinic </strong>– Empowering You to Live Your Best Life</span></p>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<footer class="text-light" style="background-color: #29817d; padding: 10px;">
+  <div class="container">
+    <div class="row text-center">
+
+      <!-- First Column -->
+      <div class="col-md-4 col-sm-12 mb-4 mx-auto" style="margin-top: 1vw; ">
+        <img src="images/808.png" alt="Your Logo" style="width: 170px; height: 75px;">
+        <br><br>
+        <p style="text-align: center; font-family: 'Cabin', sans-serif; color: black; ">7070 Knight Ct, suite 1004<br>
+          Missouri City, TX 77459<br>
+          <strong style="font-family: Kudryashev Display Sans; font-size: 15px; color: white;">Phone</strong><br>
+          281-410-2210<br>
+          <strong style="font-family: Kudryashev Display Sans; font-size: 15px; color: white;">Email</strong><br>
+          Info@boostwellnessclinic.com
+        </p>
+        <h5 style="font-family: Kudryashev Display Sans; font-size: 25px; color: white;">
+          <strong>Share & Connect</strong>
+        </h5>
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-instagram"></a>
+      </div>
+
+      <!-- Second Column -->
+      <div class="col-md-4 col-sm-12 mb-4 mx-auto" style="margin-top: 3.5vw; margin-bottom: 6vw;">
+        <h5 style="font-family: Kudryashev Display Sans; font-size: 25px; color: white; ">
+          <strong>Quick Links</strong>
+        </h5>
+        <ul class="list-unstyled" style="text-align: center;">
+        <li><a href="about.html" style="text-align: left; font-family: 'Cabin', sans-serif; color: black;">About</a></li>
+          <li><a href="blog.html" style="text-align: left; font-family: 'Cabin', sans-serif; color: black; ">Blog</a></li>
+          <li><a href="contact.html" style="text-align: left; font-family: 'Cabin', sans-serif; color: black;">Contact</a></li>
+          <li><a href="medical.html" style="text-align: left; font-family: 'Cabin', sans-serif; color: black; ">Medical Weight Loss</a></li>
+          <li><a href="life.html" style="text-align: left; font-family: 'Cabin', sans-serif; color: black; ">Lifestyle Medicine</a></li>
+          <li><a href="nutri.html" style="text-align: left; font-family: 'Cabin', sans-serif; color: black; ">IV Nutritional Therapy</a></li>
+          <li><a href="hormonetherapy.html" style="text-align: left; font-family: 'Cabin', sans-serif; color: black; ">Hormone Therapy</a></li>
+
+        </ul>   
+      </div>
+
+      <!-- Third Column -->
+      <div class="col-md-4 col-sm-12 mb-4 mx-auto" style="margin-top: 3.5vw">
+        <h5 style="font-family: Kudryashev Display Sans; font-size: 25px; color: white; ">
+          <strong>Business Hours</strong>
+        </h5>
+        <ul class="list-unstyled">
+          <li><a style="text-align: left; font-family: 'Cabin', sans-serif; color: black; ">By Appointment Only</a></li>
+          <li><a style="text-align: left; font-family: 'Cabin', sans-serif; color: black; ">Monday - CLOSED</a></li>
+          <li><a style="text-align: left; font-family: 'Cabin', sans-serif; color: black; ">Tuesday - CLOSED</a></li>
+          <li><a style="text-align: left; font-family: 'Cabin', sans-serif; color: black; ">Wednesday 9:00 am - 5:00 pm</a></li>
+          <li><a style="text-align: left; font-family: 'Cabin', sans-serif; color: black; ">Thursday - CLOSED</a></li>
+          <li><a style="text-align: left; font-family: 'Cabin', sans-serif; color: black; ">Friday 9:00 am - 5:00 pm</a></li>
+          <li><a style="text-align: left; font-family: 'Cabin', sans-serif; color: black; ">Saturday/Sunday - CLOSED</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</footer>
+
+
+
+  </div>
+  <style>
+    .fa {
+      padding: 5px; /* Adjusted padding for smaller icons */
+      font-size: 15px; /* Adjusted font size for smaller icons */
+      width: 35px; /* Adjusted width for smaller icons */
+      border-radius: 50%;
+      text-align: center;
+      text-decoration: none;
+      margin: 5px;
+    }
+
+    .fa:hover {
+      opacity: 0.7;
+    }
+
+    .fa-facebook {
+      background: teal;
+      color: white;
+    }
+
+    .fa-twitter {
+      background: teal;
+      color: white;
+    }
+
+    .fa-instagram {
+      background: teal;
+      color: white;
+    }
+
+    footer {
+      background-color: #14A098;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 5px;
+    }
+
+
+    @media (min-width: 768px) {
+      /* Adjustments for bigger screens */
+      .fa {
+        font-size: 30px;
+        width: 50px;
+      }
+
+   
+
+    }
+  </style>
+
+<script>
+    // JavaScript code to handle dropdown toggle
+    document.addEventListener("DOMContentLoaded", function () {
+        var dropdownToggle = document.querySelector('.dropdown-toggle');
+        var dropdownMenu = document.querySelector('.dropdown-menu');
+
+        dropdownToggle.addEventListener('click', function () {
+            dropdownMenu.classList.toggle('show');
+        });
+
+        document.addEventListener('click', function (event) {
+            if (!dropdownToggle.contains(event.target) && !dropdownMenu.contains(event.target)) {
+                dropdownMenu.classList.remove('show');
+            }
+        });
+    });
+</script>
+
+<script>
+    function toggleRowVisibility() {
+        var hiddenRow = document.getElementById("hiddenRow");
+        var toggleButton = document.getElementById("toggleButton");
+
+        if (hiddenRow.classList.contains("d-none")) {
+            hiddenRow.classList.remove("d-none");
+            toggleButton.textContent = "View Less Services";
+        } else {
+            hiddenRow.classList.add("d-none");
+            toggleButton.textContent = "View More Services";
+        }
+    }
+</script>
+
+<!-- Add these script tags before the closing body tag -->
+<script src="https://code.jquery.com/jquery-3.6.4.slim.min.js" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-fz5KxZ5iaSIKjsf8I5fLVxIBUEFXf4u8jpXl1E+fpS3Uof5Gg4w3gHNvjkNImSdG" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-eT53x3CA2YYXLvSdj3CzYe5krAYO6sC/Jm2eYDaUejEGCFpSc5PUFyFUm-Oh9RcT" crossorigin="anonymous"></script>
+
+
+<script src="https://code.jquery.com/jquery-3.6.4.slim.min.js" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-fz5KxZ5iaSIKjsf8I5fLVxIBUEFXf4u8jpXl1E+fpS3Uof5Gg4w3gHNvjkNImSdG" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-eT53x3CA2YYXLvSdj3CzYe5krAYO6sC/Jm2eYDaUejEGCFpSc5PUFyFUm-Oh9RcT" crossorigin="anonymous"></script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+
+</body>
+</html>

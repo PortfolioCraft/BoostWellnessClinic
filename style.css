@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=PT+Serif:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+@import url('https://db.onlinewebfonts.com/c/384a6031928e262848e4e7ef80037466?family=Kudryashev+Display+Sans'); 
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@700&display=swap');
+@import url('https://cdn.jsdelivr.net/boxicons/2.0.7/css/boxicons.min.css');
+@import url('https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css');
+@import url('https://cdn.jsdelivr.net/boxicons/2.0.7/css/boxicons.min.css');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
+@import url('https://db.onlinewebfonts.com/c/384a6031928e262848e4e7ef80037466?family=Kudryashev+Display+Sans');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+
+
+.parallax-container {
+  position: relative;
+  overflow: hidden;
+  height: 700px; /* Adjust as needed */
+}
+
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+}
+
+
+
+
+
+/* Start Global Rules */
+* {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Open Sans', sans-serif;
+    width: auto;
+  }
+  a {
+    text-decoration: none;
+  }
+  
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* Small */
+  @media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+  }
+  /* Medium */
+  @media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+  }
+  /* Large */
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+  }
+  /* End Global Rules */
+  
+  .navbar {
+    padding: 20px;
+  }
+
+  @media (min-width: 992px) {
+    /* Only apply styles for big screens (≥ 992px) */
+    .navbar-brand {
+      margin-left: 4%;
+    }
+
+    .navbar-nav {
+      margin-right: 70px;
+    }
+
+    .content .container {
+  gap: 200px;
+}
+  }
+
+  .navbar-brand {
+    margin-right: 50px; /* Adjust as needed */
+  }
+
+  .navbar-toggler {
+    margin-left: auto;
+  }
+
+  @media (max-width: 767px) {
+    .navbar-toggler {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    .navbar-brand {
+      margin-right: auto;
+    }
+
+    .navbar-nav {
+      flex-direction: column;
+    }
+
+    .navbar-nav .nav-item {
+      margin-bottom: 10px;
+    }
+  }
+
+.content .container {
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 140px;
+min-height: calc(80vh - 100px);
+}
+@media (max-width: 767px) {
+.content .container {
+  gap: 0;
+  min-height: calc(80vh - 100px);
+  justify-content: center;
+  flex-direction: column-reverse;
+}
+}
+@media (max-width: 767px) {
+.content .info {
+  text-align: center;
+  margin-bottom: 15px 
+}
+}
+.content .info h1 {
+color: #5d5d5d;
+font-size: 44px;
+}
+.content .info p {
+margin: 0;
+line-height: 1.6;
+font-size: 15px;
+color: #5d5d5d;
+}
+.content .info button {
+border: 0;
+border-radius: 20px;
+padding: 12px 30px;
+margin-top: 30px;
+cursor: pointer;
+color: #FFF;
+background-color: #6c63ff;
+}
+.landing-page .content .image img {
+max-width: 100%;
+}
+
+.teal-shadow {
+  position: relative;
+  overflow: hidden;
+  background-color: #14A098; /* Teal color */
+  border-radius: 50%;
+  width: 100px; /* Adjust the width to match the image width */
+  height: 100px; /* Adjust the height to match the image height */
+  margin: 0 auto; /* Center the image horizontally */
+}
+
+.teal-shadow img {
+  width: 100%;
+  display: block;
+  border-radius: 50%;
+  margin-top: 10px; /* Adjust the top margin as needed */
+}
+
+@media (min-width: 768px) {
+  .teal-shadow::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 4px 8px rgba(0, 128, 128, 0.5); /* Adjust opacity as needed */
+    border-radius: 50%;
+  }
+}
+
+.text-column {
+  text-align: left;
+  padding: 20px;
+}
+
+@media (max-width: 767px) {
+  .text-column,
+  .image-column {
+    margin-bottom: 20px;
+  }
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .footer-icons {
+    display: flex;
+    margin-top: 10px;
+    margin-right: 22vw;
+  }
+
+  .footer-icons a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+
+  @media (max-width: 768px) {
+    .footer-icons, .copyright {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .footer-icons {
+      justify-content: center;
+    }
+  }
+
+  .custom-container {
+    height: 80vh; /* Adjust the height as needed */
+    background-image: url('images/5.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: left;
+  }
+
+  .custom-container h1 {
+    color: black;
+    font-family: 'PT Serif', serif;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+  }
+
+  .custom-container .container {
+      margin-left: 4%;
+  }
+
+  .custom-container p {
+    color: black;
+    font-family: 'Cabin', sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 576px) {
+    .custom-container h1 {
+      font-size: 1.8rem;
+    }
+
+    .custom-container p {
+      font-size: 1rem;
+    }
+
+    .custom-container {
+      margin-left: 0;
+    }
+
+    .custom-container .container {
+      margin-left: 0;
+  }
+
+  }

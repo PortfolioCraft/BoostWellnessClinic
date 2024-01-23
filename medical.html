@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/boxicons/2.0.7/css/boxicons.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <title>Boost Wellness Clinic</title>
+  <link rel="icon" href="images/6.png" type="image/png"> 
+  <style>
+    /* Adjust the margin-bottom for the links in the navbar */
+.navbar-nav .nav-item {
+    margin-bottom: 5px; /* You can adjust this value as needed */
+}
+
+@media (max-width: 767px) {
+    .navbar-nav .nav-item {
+        margin-bottom: 10px;
+    }
+}
+
+    .navbar {
+      padding: 20px;
+    }
+    /* Add this CSS to align the logo and links in the navbar */
+.navbar-brand {
+    margin-right: auto;
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-toggler {
+    margin-left: auto;
+}
+
+@media (max-width: 767px) {
+    .navbar-nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-nav .nav-item {
+        margin-bottom: 10px;
+    }
+}
+
+
+    @media (min-width: 992px) {
+      /* Only apply styles for big screens (≥ 992px) */
+      .navbar-brand {
+        margin-left: 10%;
+      }
+
+      .navbar-nav {
+        margin-right: 70px;
+      }
+
+      .content .container {
+    gap: 200px;
+  }
+    }
+
+    .navbar-brand {
+      margin-right: 50px; /* Adjust as needed */
+    }
+
+    .navbar-toggler {
+      margin-left: auto;
+    }
+
+    @media (max-width: 767px) {
+      .navbar-toggler {
+        margin-left: 0;
+        margin-right: 0;
+      }
+
+      .navbar-brand {
+        margin-right: auto;
+      }
+
+      .navbar-nav {
+        flex-direction: column;
+      }
+
+      .navbar-nav .nav-item {
+        margin-bottom: 10px;
+      }
+    }
+
+ .content .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 140px;
+  min-height: calc(80vh - 100px);
+}
+@media (max-width: 767px) {
+ .content .container {
+    gap: 0;
+    min-height: calc(80vh - 100px);
+    justify-content: center;
+    flex-direction: column-reverse;
+  }
+}
+@media (max-width: 767px) {
+ .content .info {
+    text-align: center;
+    margin-bottom: 15px 
+  }
+}
+ .content .info h1 {
+  color: #5d5d5d;
+  font-size: 44px;
+}
+ .content .info p {
+  margin: 0;
+  line-height: 1.6;
+  font-size: 15px;
+  color: #5d5d5d;
+}
+ .content .info button {
+  border: 0;
+  border-radius: 20px;
+  padding: 12px 30px;
+  margin-top: 30px;
+  cursor: pointer;
+  color: #FFF;
+  background-color: #6c63ff;
+}
+.landing-page .content .image img {
+  max-width: 100%;
+}
+
+.teal-shadow {
+    position: relative;
+    overflow: hidden;
+    background-color: #14A098; /* Teal color */
+    border-radius: 50%;
+    width: 100px; /* Adjust the width to match the image width */
+    height: 100px; /* Adjust the height to match the image height */
+    margin: 0 auto; /* Center the image horizontally */
+  }
+
+  .teal-shadow img {
+    width: 100%;
+    display: block;
+    border-radius: 50%;
+    margin-top: 10px; /* Adjust the top margin as needed */
+  }
+
+  @media (min-width: 768px) {
+    .teal-shadow::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      box-shadow: 0 4px 8px rgba(0, 128, 128, 0.5); /* Adjust opacity as needed */
+      border-radius: 50%;
+    }
+  }
+
+  .text-column {
+    text-align: left;
+    padding: 20px;
+  }
+
+  @media (max-width: 767px) {
+    .text-column,
+    .image-column {
+      margin-bottom: 20px;
+    }
+  }
+
+  footer {
+      background-color: #000;
+      color: #fff;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .footer-icons {
+      display: flex;
+      margin-top: 10px;
+      margin-right: 22vw;
+    }
+
+    .footer-icons a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    @media (max-width: 768px) {
+      .footer-icons, .copyright {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+      .footer-icons {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<style>
+		
+    .nav-link:hover {
+      color: green !important;
+      text-decoration: underline;
+      text-decoration-color: green;
+    }
+    .underline-on-hover:hover {
+      text-decoration: underline;
+      text-decoration-color: green;
+      color: green;
+    }
+    
+    .logo-image {
+      display: block;
+        margin-left: auto;
+        margin-right: auto;
+      width: 150px;
+    }
+    
+    
+    .navbar-nav {
+        float:none;
+        margin:0 auto;
+        display: block;
+        text-align: center;
+    }
+    .navbar-nav li {
+        display: inline-block;
+        float: none;
+      font-size: 14px;
+    }
+    .navbar-nav a {
+      transition: transform .3s !important;
+      backface-visibility: hidden;
+    }
+    .navbar-nav li:last-child {
+      border: none;
+    }
+    .dropdown-menu li {
+      border: none;
+    }
+    .dropdown-menu a {
+      display: block;
+    }
+    /* See if you can target all but the last nav-link with the class above and below. */
+    .navbar-nav a:hover {
+        color: #228B22;
+      text-decoration: none;
+      transform: scale(1.1)!important;
+    }
+    .dropdown-menu a:hover {
+      color: #228B22 !important;
+      transform: none !important;
+    }
+    .navbar-nav i:hover {
+      background-color: green !important;
+      border-width: 0 2px 2px 0;
+      transform: scale(1.2)!important;
+    }
+    #main-body {
+      background-color: red;
+    }
+    /* See what you can do to edit the color upon hover i class. */
+    .active {
+      color: teal;
+      text-decoration: underline;
+      text-decoration-color: teal;
+    }
+    #Header p {
+      text-align: right;
+    }
+    @media (max-width: 767px) {
+            .logo-link {
+                order: -1;
+            }
+      }
+        
+      </style>	
+    
+    
+
+<section id="Header">
+    <a href="index.html" class="logo-link"><img src="images/646.png" class="logo-image" id="top" style="width: 250px; height: 120px;"></a>
+</section>
+
+<section id="navigationBar">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+      <li class="nav-item  px-2">
+	  <a class="nav-link" href="index.html" style="color: #14A098;font-family: 'PT Serif', serif;  font-size: 20px;">Home </a>
+      </li>
+	
+	  <li class="nav-item px-2">
+	 <a class="nav-link" href="about.html"  style="color: #14A098; font-family: 'PT Serif', serif; font-size: 20px;">About</a>
+</li>
+	<li class="dropdown">
+		<a href="#" class="nav-link  active droptown-toggle" data-toggle="dropdown" id="navbarDropdownLink" aria-haspopup="true" aria-expanded="true" style="color: #14A098; font-family: 'PT Serif', serif; font-size: 20px;">Services<span class="sr-only">(current)</span> <i class="arrow down"></i></a>
+		
+    <ul class="dropdown-menu">
+			<li>  <a class="dropdown-item" href="medical.html" style="color: #14A098; font-family: 'PT Serif', serif; font-size: 20px; font-weight: bold;">Medical Weight Loss</a>		</li><br>
+			<li>  <a class="dropdown-item" href="life.html" style="color: #14A098; font-family: 'PT Serif', serif; font-size: 20px; font-weight: bold;">Lifestyle Medicine</a></li><br>
+			<li>  <a class="dropdown-item" href="nutri.html" style="color: #14A098; font-family: 'PT Serif', serif; font-size: 20px; font-weight: bold;">Nutritional Therapy</a></li><br>
+      <li>  <a class="dropdown-item" href="hormonetherapy.html" style="color: #14A098; font-family: 'PT Serif', serif; font-size: 20px; font-weight: bold;">Hormone Therapy</a></li><br>
+
+		</ul>
+	</li>
+	
+    <li class="nav-item px-2">
+	 <a class="nav-link" href="contact.html"  style="color: #14A098; font-family: 'PT Serif', serif;  font-size: 20px;">Contact</a>
+	</li>
+	<li class="nav-item px-2">
+	 <a class="nav-link" href="blog.html"  style="color: #14A098; font-family: 'PT Serif', serif;  font-size: 20px;">Blogs</a>
+	</li>
+	<li class="nav-item px-2">
+	<button class="btn" style="border-radius: 100px; color: #14A098; background-color: silver; font-family: 'PT Serif', serif; font-weight: bold; margin-left: 20px; margin-top: 4px;">Book An Appointment</button>
+	</li>
+    
+
+
+</nav>
+  </section>
+
+
+
+
+
+<div class="hero-container">
+        <div class="container">
+            <div class="hero-text">
+      <h2 style="font-family: 'PT Serif', serif; font-size: 25px; color: #14A098;text-align: center;">Discover Sustainable Weight Loss with Our Medically Supervised Weight loss Program</h2>
+    </div>
+        </div>
+</div>
+
+<style>
+    body {
+        margin: 0;
+    }
+
+    .hero {
+        display: flex;
+        flex-direction: column;
+        background-image: url("images/pa.png");
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 50%;
+        align-items: left;
+        justify-content: center;
+        height: 70vh; /* Set the height to 100% of the viewport height */
+        margin-left: 10%; /* Set left margin to 10% */
+        margin-right: 10%; /* Set right margin to 10% */
+
+        @media (max-width: 767px) {
+            margin-left: 0; /* Set left margin to 0 for small screens */
+            margin-right: 0; /* Set right margin to 0 for small screens */
+        }
+    }
+
+    .text p {
+        font-family: 'Cabin', sans-serif;
+        color: black;
+        text-shadow: 2px 2px 4px white, -2px -2px 4px white, 2px -2px 4px white, -2px 2px 4px white;
+        background: white;
+        padding: 10px;
+        -webkit-background-clip: text;
+        background-clip: text;
+    }
+
+    .text h1 {
+        color: #14A098;
+        font-family: 'PT Serif', serif;
+        -webkit-text-stroke: 2px white;
+        background-clip: text;
+    }
+
+    .hero-container {
+    position: relative;
+    text-align: center;
+    color: #fff;
+    height: 400px;  
+    margin-left: 10%; /* Set left margin to 10% */
+        margin-right: 10%; /* Set right margin to 10% */
+    padding: 100px 0; /* Adjust the top and bottom padding as needed */
+    background: url("images/pa.png") center center no-repeat;
+    background-size: cover;
+}
+
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 2px 2px 4px white, -2px -2px 4px white, 2px -2px 4px white, -2px 2px 4px white;
+}
+
+
+    .text {
+        font-size: 1.4rem;
+        text-align: left;
+        margin-left: 2vw;
+        width: 100%;
+        padding-left: 2%;
+    }
+
+    @media (min-width: 768px) {
+        .text {
+            text-align: left;
+            padding-left: 8%;
+        }
+
+        .text h1 {
+            color: #14A098;
+            font-family: 'PT Serif', serif;
+            -webkit-text-stroke: 2px white;
+            background-clip: text;
+        }
+    }
+</style>
+
+
+
+        <div class="container mt-4">
+
+  <div class="row">
+
+    <!-- First Column -->
+    <div class="col-md-6 mb-4">
+    <div class="container mt-5">
+  <h2 style="font-family: 'PT Serif', serif; font-size: 25px;color: #14A098;">Tired of the Weight Loss Rollercoaster?</h2>
+  <p style="font-family: 'Cabin', sans-serif;">Facing health challenges such as diabetes, heart disease, or hypertension due to weight issues, or
+finding yourself stuck in a cycle of unsuccessful diets and weight loss programs? You're not the only one
+on this journey. Our medically supervised weight loss program is designed specifically for individuals
+seeking a lasting and effective solution to improve their health by shedding excess weight.<br>
+ 
+ We offer a comprehensive and structured approach to creating a wellness plan dedicated to achieving your optimal body goals.</p>
+ <br>
+ <h2 style="font-family: 'PT Serif', serif; font-size: 25px; color: #14A098;">Why Our Program Works:</h2>
+ <p style="font-family: 'Cabin', sans-serif;">
+ Beyond Medication: Learn how to manage your weight effectively without over-reliance on medication.
+We know the frustration of yo-yo dieting. Our program is built to overcome these common hurdles.<br><br>
+Expert Guidance: Our team monitors your transition and provide the expertise and support you need to
+achieve and sustain your weight loss goals.<br><br>
+Personalized for Your Success: Tailored strategies to fit your body's needs and your lifestyle, providing
+the tools for lasting change. We recognize that a one-size-fits-all approach doesn't work.<br><br>
+Focused on Disease Improvement: Our program targets weight loss as a key factor in managing and
+potentially reversing lifestyle-related conditions such diabetes, hypertension or fatty-liver disease.
+</p>
+
+
+</div>
+    </div>
+
+    <!-- Second Column -->
+    <div class="col-md-6 mb-4">
+      <div class="card border-0">
+      <img src="https://sa1s3optim.patientpop.com/assets/images/provider/photos/2442353.jpg" alt="Sample Image" class="img-fluid" style="width: 100%; margin-top: 10vw;"><br><br>
+    <h2 style="font-family: 'PT Serif', serif; font-size: 25px; color: #14A098;">Ready to Transform?</h2>
+    <p style="font-family: 'Cabin', sans-serif;">If you're ready to break the cycle and achieve sustainable weight loss, Boost Wellness Clinic is here for
+you. Contact us today to start a new chapter in your health journey.</p>
+      </div>
+    </div>
+  </div>
+
+<br>
+
+
+
+  <h2 style="font-family: 'PT Serif', serif; font-size: 25px; color: #14A098;">Frequently Asked Questions (FAQs) -</h2>
+  <br>
+  <h3 style="font-family: 'PT Serif', serif; font-size: 23px; color: #14A098;">Q: What is a Medically supervised Weight Loss Program?</h3>
+
+    <p style="font-family: 'Cabin', sans-serif;">A: A Medically Supervised Weight Loss Program is a comprehensive weight management plan designed
+to help you achieve and maintain a healthy weight through balanced nutrition, physical activity, and
+lifestyle changes. It's focused on sustainable health and well-being, rather than quick fixes.</p>
+
+
+
+<br>
+  <h3 style="font-family: 'PT Serif', serif; font-size: 23px; color: #14A098;">Q: Who is the program for?</h3>
+
+    <p style="font-family: 'Cabin', sans-serif;">A: This program is ideal for anyone looking to lose weight in a healthy, sustainable way, whether you're
+just starting your weight loss journey or seeking to maintain your current healthy weight.</p>
+
+
+
+<br>
+  <h3 style="font-family: 'PT Serif', serif; font-size: 23px; color: #14A098;">Q: What does the program include?</h3>
+
+    <p style="font-family: 'Cabin', sans-serif;">A: The program includes personalized nutrition plans, fitness routines, regular health assessments, and
+ongoing support from our team of medical providers, fitness experts, and health coaches.</p>
+
+
+
+<br>
+  <h3 style="font-family: 'PT Serif', serif; font-size: 23px; color: #14A098;">Q: Does the program include the use of FDA-approved medication for weight loss?</h3>
+
+    <p style="font-family: 'Cabin', sans-serif;">A: Yes, for eligible participants, our program may incorporate FDA-approved weight loss medications as
+part of the treatment plan. These medications are used in conjunction with nutritional guidance, fitness
+routines, and lifestyle modifications, and are prescribed after a thorough health evaluation to ensure
+they are appropriate and safe for you.</p>
+
+
+
+<br>
+  <h3 style="font-family: 'PT Serif', serif; font-size: 23px; color: #14A098;">Q: How long is the program?</h3>
+
+    <p style="font-family: 'Cabin', sans-serif;">A: The duration of the program varies depending on your individual goals and needs. We offer flexible
+plans ranging from a few months to a year-long journey.</p>
+
+
+<br>
+  <h3 style="font-family: 'PT Serif', serif; font-size: 23px; color: #14A098;">Q: Is the program based on dieting?</h3>
+
+    <p style="font-family: 'Cabin', sans-serif;">A: Rather than promoting short-term diets, the program focuses on long-term lifestyle changes that
+include balanced eating, regular physical activity, and mindfulness practices.</p>
+
+
+<br>
+  <h3 style="font-family: 'PT Serif', serif; font-size: 23px; color: #14A098;">Q: Do I need to purchase special foods or supplements?</h3>
+
+    <p style="font-family: 'Cabin', sans-serif;">A: No, the program emphasizes eating whole, nutritious foods that are easily accessible. We may
+recommend certain supplements if they fit your individual health needs, but they are not a mandatory
+part of the program.</p>
+
+
+<br>
+  <h3 style="font-family: 'PT Serif', serif; font-size: 23px; color: #14A098;">Q: What hormones are most linked to weight gain?</h3>
+
+    <p style="font-family: 'Cabin', sans-serif;">
+    A: Hormones such as cortisol (stress hormone), insulin (related to sugar metabolism), thyroid hormones,
+and sex hormones like estrogen and testosterone can all impact weight. Imbalances in these hormones
+can lead to weight gain or difficulty in losing weight.</p>
+
+
+<br>
+  <h3 style="font-family: 'PT Serif', serif; font-size: 23px; color: #14A098;">Q: How does Boost Wellness Clinic approach weight loss relate to hormone imbalance?</h3>
+
+    <p style="font-family: 'Cabin', sans-serif;">
+    A: At Boost Wellness Clinic, we offer personalized assessments to identify hormone imbalances that
+may be affecting weight. Our comprehensive approach includes hormone therapy (if needed),
+nutritional counseling, fitness programs, and lifestyle modifications for effective weight management.</p>
+
+
+
+<br>
+  <h3 style="font-family: 'PT Serif', serif; font-size: 23px; color: #14A098;">Q: Can the program accommodate dietary restrictions?</h3>
+
+    <p style="font-family: 'Cabin', sans-serif;">
+    A: Yes, we can tailor your nutrition plan to accommodate any dietary restrictions, allergies, or
+preferences you have.</p>
+
+
+<br>
+  <h3 style="font-family: 'PT Serif', serif; font-size: 23px; color: #14A098;">Q: What kind of support will I receive?</h3>
+
+    <p style="font-family: 'Cabin', sans-serif;">
+    A: You will receive continuous support from our team, including regular check-ins, progress tracking, and
+adjustments to your plan as needed. We're here to motivate and guide you throughout your journey.</p>
+
+
+
+<br>
+  <h3 style="font-family: 'PT Serif', serif; font-size: 23px; color: #14A098;">Q: How is progress measured in the program?</h3>
+
+    <p style="font-family: 'Cabin', sans-serif;">
+    A: Progress is measured through a combination of weight tracking, body measurements, fitness level
+assessments, and overall health and well-being indicators.</p>
+
+
+<br>
+  <h3 style="font-family: 'PT Serif', serif; font-size: 23px; color: #14A098;">Q: Is the weight Loss Program covered by insurance?</h3>
+
+    <p style="font-family: 'Cabin', sans-serif;">
+    A: Coverage for weight loss programs varies by insurance provider and plan. We recommend checking
+with your insurance provider to understand your coverage. Our staff can assist you in navigating
+insurance queries and provide information on available payment options for any uncovered services.</p>
+
+
+<br>
+  <h3 style="font-family: 'PT Serif', serif; font-size: 23px; color: #14A098;">Q: How can I sign up for the weight Loss Program?</h3>
+
+    <p style="font-family: 'Cabin', sans-serif;">
+    A: You can sign up by contacting us directly through our website or by calling our clinic. We'll start with
+an initial consultation to discuss your goals and how we can best support you.</p>
+
+<br><br>
+<p style="font-family: 'Cabin', sans-serif; text-align: center; font-size: 23px;">Have More Questions? Feel free to reach out to us for more information or to schedule your initial
+consultation. Let's take the first step on your journey together!</p>
+</div><br><br>
+
+
+
+
+
+
+</div><br><br>
+</div>
+
+
+<footer class="text-light" style="background-color: #29817d; padding: 10px;">
+  <div class="container">
+    <div class="row text-center">
+
+      <!-- First Column -->
+      <div class="col-md-4 col-sm-12 mb-4 mx-auto" style="margin-top: 1vw; ">
+        <img src="images/808.png" alt="Your Logo" style="width: 170px; height: 75px;">
+        <br><br>
+        <p style="text-align: center; font-family: 'Cabin', sans-serif; color: black; ">7070 Knight Ct, suite 1004<br>
+          Missouri City, TX 77459<br>
+          <strong style="font-family: Kudryashev Display Sans; font-size: 15px; color: white;">Phone</strong><br>
+          281-410-2210<br>
+          <strong style="font-family: Kudryashev Display Sans; font-size: 15px; color: white;">Email</strong><br>
+          Info@boostwellnessclinic.com
+        </p>
+        <h5 style="font-family: Kudryashev Display Sans; font-size: 25px; color: white;">
+          <strong>Share & Connect</strong>
+        </h5>
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-instagram"></a>
+      </div>
+
+      <!-- Second Column -->
+      <div class="col-md-4 col-sm-12 mb-4 mx-auto" style="margin-top: 3.5vw; margin-bottom: 6vw;">
+        <h5 style="font-family: Kudryashev Display Sans; font-size: 25px; color: white; ">
+          <strong>Quick Links</strong>
+        </h5>
+        <ul class="list-unstyled" style="text-align: center;">
+        <li><a href="about.html" style="text-align: left; font-family: 'Cabin', sans-serif; color: black;">About</a></li>
+          <li><a href="blog.html" style="text-align: left; font-family: 'Cabin', sans-serif; color: black; ">Blog</a></li>
+          <li><a href="contact.html" style="text-align: left; font-family: 'Cabin', sans-serif; color: black;">Contact</a></li>
+          <li><a href="medical.html" style="text-align: left; font-family: 'Cabin', sans-serif; color: black; ">Medical Weight Loss</a></li>
+          <li><a href="life.html" style="text-align: left; font-family: 'Cabin', sans-serif; color: black; ">Lifestyle Medicine</a></li>
+          <li><a href="nutri.html" style="text-align: left; font-family: 'Cabin', sans-serif; color: black; ">IV Nutritional Therapy</a></li>
+          <li><a href="hormonetherapy.html" style="text-align: left; font-family: 'Cabin', sans-serif; color: black; ">Hormone Therapy</a></li>
+
+        </ul>   
+      </div>
+
+      <!-- Third Column -->
+      <div class="col-md-4 col-sm-12 mb-4 mx-auto" style="margin-top: 3.5vw">
+        <h5 style="font-family: Kudryashev Display Sans; font-size: 25px; color: white; ">
+          <strong>Business Hours</strong>
+        </h5>
+        <ul class="list-unstyled">
+          <li><a style="text-align: left; font-family: 'Cabin', sans-serif; color: black; ">By Appointment Only</a></li>
+          <li><a style="text-align: left; font-family: 'Cabin', sans-serif; color: black; ">Monday - CLOSED</a></li>
+          <li><a style="text-align: left; font-family: 'Cabin', sans-serif; color: black; ">Tuesday - CLOSED</a></li>
+          <li><a style="text-align: left; font-family: 'Cabin', sans-serif; color: black; ">Wednesday 9:00 am - 5:00 pm</a></li>
+          <li><a style="text-align: left; font-family: 'Cabin', sans-serif; color: black; ">Thursday - CLOSED</a></li>
+          <li><a style="text-align: left; font-family: 'Cabin', sans-serif; color: black; ">Friday 9:00 am - 5:00 pm</a></li>
+          <li><a style="text-align: left; font-family: 'Cabin', sans-serif; color: black; ">Saturday/Sunday - CLOSED</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</footer>
+
+
+
+
+  </div>
+  <style>
+    .fa {
+      padding: 5px; /* Adjusted padding for smaller icons */
+      font-size: 15px; /* Adjusted font size for smaller icons */
+      width: 35px; /* Adjusted width for smaller icons */
+      border-radius: 50%;
+      text-align: center;
+      text-decoration: none;
+      margin: 5px;
+    }
+
+    .fa:hover {
+      opacity: 0.7;
+    }
+
+    .fa-facebook {
+      background: teal;
+      color: white;
+    }
+
+    .fa-twitter {
+      background: teal;
+      color: white;
+    }
+
+    .fa-instagram {
+      background: teal;
+      color: white;
+    }
+
+    footer {
+      background-color: #14A098;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 5px;
+    }
+
+
+    @media (min-width: 768px) {
+      /* Adjustments for bigger screens */
+      .fa {
+        font-size: 30px;
+        width: 50px;
+      }
+
+   
+
+    }
+  </style>
+
+<script>
+    // JavaScript code to handle dropdown toggle
+    document.addEventListener("DOMContentLoaded", function () {
+        var dropdownToggle = document.querySelector('.dropdown-toggle');
+        var dropdownMenu = document.querySelector('.dropdown-menu');
+
+        dropdownToggle.addEventListener('click', function () {
+            dropdownMenu.classList.toggle('show');
+        });
+
+        document.addEventListener('click', function (event) {
+            if (!dropdownToggle.contains(event.target) && !dropdownMenu.contains(event.target)) {
+                dropdownMenu.classList.remove('show');
+            }
+        });
+    });
+</script>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+
+</body>
+</html>

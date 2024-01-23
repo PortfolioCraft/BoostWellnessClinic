@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/boxicons/2.0.7/css/boxicons.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <title>Boost Wellness Clinic</title>
+  <link rel="icon" href="images/6.png" type="image/png"> 
+  <style>
+    /* Adjust the margin-bottom for the links in the navbar */
+.navbar-nav .nav-item {
+    margin-bottom: 5px; /* You can adjust this value as needed */
+}
+
+@media (max-width: 767px) {
+    .navbar-nav .nav-item {
+        margin-bottom: 10px;
+    }
+}
+
+    .navbar {
+      padding: 20px;
+    }
+    /* Add this CSS to align the logo and links in the navbar */
+.navbar-brand {
+    margin-right: auto;
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-toggler {
+    margin-left: auto;
+}
+
+@media (max-width: 767px) {
+    .navbar-nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-nav .nav-item {
+        margin-bottom: 10px;
+    }
+}
+
+
+    @media (min-width: 992px) {
+      /* Only apply styles for big screens (≥ 992px) */
+      .navbar-brand {
+        margin-left: 10%;
+      }
+
+      .navbar-nav {
+        margin-right: 70px;
+      }
+
+      .content .container {
+    gap: 200px;
+  }
+    }
+
+    .navbar-brand {
+      margin-right: 50px; /* Adjust as needed */
+    }
+
+    .navbar-toggler {
+      margin-left: auto;
+    }
+
+    @media (max-width: 767px) {
+      .navbar-toggler {
+        margin-left: 0;
+        margin-right: 0;
+      }
+
+      .navbar-brand {
+        margin-right: auto;
+      }
+
+      .navbar-nav {
+        flex-direction: column;
+      }
+
+      .navbar-nav .nav-item {
+        margin-bottom: 10px;
+      }
+    }
+
+ .content .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 140px;
+  min-height: calc(80vh - 100px);
+}
+@media (max-width: 767px) {
+ .content .container {
+    gap: 0;
+    min-height: calc(80vh - 100px);
+    justify-content: center;
+    flex-direction: column-reverse;
+  }
+}
+@media (max-width: 767px) {
+ .content .info {
+    text-align: center;
+    margin-bottom: 15px 
+  }
+}
+ .content .info h1 {
+  color: #5d5d5d;
+  font-size: 44px;
+}
+ .content .info p {
+  margin: 0;
+  line-height: 1.6;
+  font-size: 15px;
+  color: #5d5d5d;
+}
+ .content .info button {
+  border: 0;
+  border-radius: 20px;
+  padding: 12px 30px;
+  margin-top: 30px;
+  cursor: pointer;
+  color: #FFF;
+  background-color: #6c63ff;
+}
+.landing-page .content .image img {
+  max-width: 100%;
+}
+
+.teal-shadow {
+    position: relative;
+    overflow: hidden;
+    background-color: #14A098; /* Teal color */
+    border-radius: 50%;
+    width: 100px; /* Adjust the width to match the image width */
+    height: 100px; /* Adjust the height to match the image height */
+    margin: 0 auto; /* Center the image horizontally */
+  }
+
+  .teal-shadow img {
+    width: 100%;
+    display: block;
+    border-radius: 50%;
+    margin-top: 10px; /* Adjust the top margin as needed */
+  }
+
+  @media (min-width: 768px) {
+    .teal-shadow::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      box-shadow: 0 4px 8px rgba(0, 128, 128, 0.5); /* Adjust opacity as needed */
+      border-radius: 50%;
+    }
+  }
+
+  .text-column {
+    text-align: left;
+    padding: 20px;
+  }
+
+  @media (max-width: 767px) {
+    .text-column,
+    .image-column {
+      margin-bottom: 20px;
+    }
+  }
+
+  footer {
+      background-color: #000;
+      color: #fff;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .footer-icons {
+      display: flex;
+      margin-top: 10px;
+      margin-right: 22vw;
+    }
+
+    .footer-icons a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    @media (max-width: 768px) {
+      .footer-icons, .copyright {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+      .footer-icons {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<style>
+		
+    .nav-link:hover {
+      color: green !important;
+      text-decoration: underline;
+      text-decoration-color: green;
+    }
+    .underline-on-hover:hover {
+      text-decoration: underline;
+      text-decoration-color: green;
+      color: green;
+    }
+    
+    .logo-image {
+      display: block;
+        margin-left: auto;
+        margin-right: auto;
+      width: 150px;
+    }
+    
+    
+    .navbar-nav {
+        float:none;
+        margin:0 auto;
+        display: block;
+        text-align: center;
+    }
+    .navbar-nav li {
+        display: inline-block;
+        float: none;
+      font-size: 14px;
+    }
+    .navbar-nav a {
+      transition: transform .3s !important;
+      backface-visibility: hidden;
+    }
+    .navbar-nav li:last-child {
+      border: none;
+    }
+    .dropdown-menu li {
+      border: none;
+    }
+    .dropdown-menu a {
+      display: block;
+    }
+    /* See if you can target all but the last nav-link with the class above and below. */
+    .navbar-nav a:hover {
+        color: #228B22;
+      text-decoration: none;
+      transform: scale(1.1)!important;
+    }
+    .dropdown-menu a:hover {
+      color: #228B22 !important;
+      transform: none !important;
+    }
+    .navbar-nav i:hover {
+      background-color: green !important;
+      border-width: 0 2px 2px 0;
+      transform: scale(1.2)!important;
+    }
+    #main-body {
+      background-color: red;
+    }
+    /* See what you can do to edit the color upon hover i class. */
+    .active {
+      color: teal;
+      text-decoration: underline;
+      text-decoration-color: teal;
+    }
+    #Header p {
+      text-align: right;
+    }
+    @media (max-width: 767px) {
+            .logo-link {
+                order: -1;
+            }
+      }
+        
+      </style>	
+    
+    
+
+<section id="Header">
+    <a href="index.html" class="logo-link"><img src="images/646.png" class="logo-image" id="top" style="width: 250px; height: 120px;"></a>
+</section>
+
+<section id="navigationBar">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+      <li class="nav-item  px-2">
+	  <a class="nav-link" href="index.html" style="color: #14A098;font-family: 'PT Serif', serif;  font-size: 20px;">Home </a>
+      </li>
+	
+	  <li class="nav-item px-2">
+	 <a class="nav-link" href="about.html"  style="color: #14A098; font-family: 'PT Serif', serif; font-size: 20px;">About</a>
+</li>
+	<li class="dropdown">
+		<a href="#" class="nav-link droptown-toggle" data-toggle="dropdown" id="navbarDropdownLink" aria-haspopup="true" aria-expanded="true" style="color: #14A098; font-family: 'PT Serif', serif; font-size: 20px;">Services <i class="arrow down"></i></a>
+		
+		<ul class="dropdown-menu">
+			<li>  <a class="dropdown-item" href="medical.html" style="color: #14A098; font-family: 'PT Serif', serif; font-size: 20px; font-weight: bold;">Medical Weight Loss</a>		</li><br>
+			<li>  <a class="dropdown-item" href="life.html" style="color: #14A098; font-family: 'PT Serif', serif; font-size: 20px; font-weight: bold;">Lifestyle Medicine</a></li><br>
+			<li>  <a class="dropdown-item" href="nutri.html" style="color: #14A098; font-family: 'PT Serif', serif; font-size: 20px; font-weight: bold;">Nutritional Therapy</a></li><br>
+      <li>  <a class="dropdown-item" href="hormonetherapy.html" style="color: #14A098; font-family: 'PT Serif', serif; font-size: 20px; font-weight: bold;">Hormone Therapy</a></li><br>
+
+		</ul>
+	</li>
+	
+    <li class="nav-item px-2">
+	 <a class="nav-link" href="contact.html"  style="color: #14A098; font-family: 'PT Serif', serif;  font-size: 20px;">Contact</a>
+	</li>
+	<li class="nav-item active px-2">
+	 <a class="nav-link" href="blog.html"  style="color: #14A098; font-family: 'PT Serif', serif;  font-size: 20px;">Blogs<span class="sr-only">(current)</span></a>
+	</li>
+	<li class="nav-item px-2">
+	<button class="btn" style="border-radius: 100px; color: #14A098; background-color: silver; font-family: 'PT Serif', serif; font-weight: bold; margin-left: 20px; margin-top: 4px;">Book An Appointment</button>
+	</li>
+    
+
+
+</nav>
+  </section>
+
+
+
+<div class="hero-container">
+        <div class="container">
+            <div class="hero-text">
+    </div>
+        </div>
+</div>
+
+<style>
+    body {
+        margin: 0;
+    }
+
+    .hero {
+        display: flex;
+        flex-direction: column;
+        background-image: url("images/444.png");
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 50%;
+        align-items: left;
+        justify-content: center;
+        height: 70vh; /* Set the height to 100% of the viewport height */
+        margin-left: 10%; /* Set left margin to 10% */
+        margin-right: 10%; /* Set right margin to 10% */
+
+        @media (max-width: 767px) {
+            margin-left: 0; /* Set left margin to 0 for small screens */
+            margin-right: 0; /* Set right margin to 0 for small screens */
+        }
+    }
+
+    .text p {
+        font-family: 'Cabin', sans-serif;
+        color: black;
+        text-shadow: 2px 2px 4px white, -2px -2px 4px white, 2px -2px 4px white, -2px 2px 4px white;
+        background: white;
+        padding: 10px;
+        -webkit-background-clip: text;
+        background-clip: text;
+    }
+
+    .text h1 {
+        color: #14A098;
+        font-family: 'PT Serif', serif;
+        -webkit-text-stroke: 2px white;
+        background-clip: text;
+    }
+
+    .hero-container {
+    position: relative;
+    text-align: center;
+    color: #fff;
+    height: 400px;  
+    margin-left: 10%; /* Set left margin to 10% */
+        margin-right: 10%; /* Set right margin to 10% */
+    padding: 100px 0; /* Adjust the top and bottom padding as needed */
+    background: url("images/444.png") center center no-repeat;
+    background-size: cover;
+}
+
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 2px 2px 4px white, -2px -2px 4px white, 2px -2px 4px white, -2px 2px 4px white;
+}
+
+
+    .text {
+        font-size: 1.4rem;
+        text-align: left;
+        margin-left: 2vw;
+        width: 100%;
+        padding-left: 2%;
+    }
+
+    @media (min-width: 768px) {
+        .text {
+            text-align: left;
+            padding-left: 8%;
+        }
+
+        .text h1 {
+            color: #14A098;
+            font-family: 'PT Serif', serif;
+            -webkit-text-stroke: 2px white;
+            background-clip: text;
+        }
+    }
+</style>
+
+
+
+
+
+
+
+
+<div class="container-fluid" style="margin-top: 4vh;">
+        <div class="row">
+            <!-- Left Column (Occupying 75%) -->
+            <div class="col-md-8 ml-md-auto">
+                <div class=" text-white p-4">
+                    <h2 style="font-family: 'PT Serif', serif; font-size: 25px;color: #14A098;">Want Increased Confidence? 6 Tips That Actually Work</h2>
+                    <p style="font-family: 'Cabin', sans-serif; color: black;">August 14, 2023</p>
+                    <p style="font-family: 'Cabin', sans-serif; color: black;">By  Boostwellnessblogs</p>
+                    <p style="text-align: left; font-family: 'Cabin', sans-serif; color: black;">
+                    Confidence is one of the essential attributes that a person should possess, as it greatly contributes to a person’s success and the accomplishment of goals. It affects various aspects of your life, such as social interaction, personal and professional relationships, and overall well-being. It’s a common fact that some people are naturally confident, while others struggle to find it. However, the good news is that confidence is a skill that you can learn and develop over time with practice and dedication. In this article, we’ll provide you with six tips that will help you boost your confidence level, and with some patience and effort, you’ll be able to achieve it.
+
+<br>     <br>               <span style="font-family: 'PT Serif', serif; font-size: 22px;color: #14A098;">Stop comparing yourself to others</span>
+
+                    <br><br>
+                    Do you ever find yourself scrolling through social media and feeling envious of someone else’s life or accomplishments? It’s easy to fall into the trap of constant comparison, but it ultimately does more harm than good. Comparing yourself with others can lead to negative self-talk and a decrease in confidence. Instead of focusing on what others are doing, try shifting your perspective to focus on your own growth and accomplishments. Remember that everyone’s journey is different, and that’s okay. Embrace your unique path and celebrate your personal victories, no matter how big or small. Over time, you’ll find that your confidence will naturally begin to boost as you focus on yourself, rather than others.
+
+<br><br>  <span style="font-family: 'PT Serif', serif; font-size: 22px;color: #14A098;">Practice positive self-talk</span>
+
+                    <br><br>
+                    The way you talk to yourself greatly impacts your level of confidence. Negative self-talk can quickly drain your confidence, while positive self-talk can boost it up. Practice talking to yourself positively using affirmations such as “I’m capable of handling this,” “I’m strong and resilient,” “I know I can do this.” Make it a habit to replace any negative thoughts with positive affirmations. Remember, you’re in control of your thoughts, and they can either lift you up or pull you down.
+
+<br><br>   
+                    <span style="font-family: 'PT Serif', serif; font-size: 22px;color: #14A098;">Step out of your comfort zone</span><br><br>
+
+                    It’s always easier to stay in your comfort zone, but if you want to increase your confidence, you have to step out of it. Challenging yourself, trying new things, and taking calculated risks can make a significant impact on your confidence and self-esteem. Start small, set achievable goals, and work your way up. Each time you accomplish something outside your comfort zone, you’ll feel more confident and capable.                    
+                    <br><br>  <span style="font-family: 'PT Serif', serif; font-size: 22px;color: #14A098;">Take care of your body</span><br><br>
+                    Our bodies are powerful vessels that allow us to experience the world around us. But when we don’t take care of them, we may find ourselves becoming self-conscious and lacking in confidence. By making a conscious effort to take care of our bodies, we can boost our self-esteem and feel more confident in everything we do. Whether it’s practicing healthy habits like eating nutritious foods, drinking water, getting enough sleep, or engaging in physical activities that we enjoy, taking care of our bodies can have a huge impact on our mindset. When we feel strong, nourished, and energized, we are better equipped to take on whatever challenges life throws our way with confidence and determination. So go ahead and take that extra step to care for your body – your mind and spirit will thank you for it.
+                    <br><br>  <span style="font-family: 'PT Serif', serif; font-size: 22px;color: #14A098;">Improve your body language</span><br><br>
+
+                    Your body language communicates more about you than you may think, and it greatly affects how others perceive you. To increase your confidence, try improving your body language by making eye contact, standing up straight, and keeping a relaxed posture. When you practice confident movements, your brain receives positive signals, which, in turn, will boost your confidence.
+                    <br><br>  <span style="font-family: 'PT Serif', serif; font-size: 22px;color: #14A098;">Surround yourself with positive people</span><br><br>
+                    The people you surround yourself with have a significant impact on your level of confidence. Negative or unsupportive people can quickly bring down your confidence level, while supportive and encouraging ones can help lift it. Surround yourself with people who know your worth, appreciate and respect you. Spend more time with those who lift you up and encourage you to be the best version of yourself.
+                        <br><br>
+                        Increasing your confidence level takes time, effort, and patience. Remember to be kind to yourself along the way. Rome wasn’t built in a day, and it’s okay to have setbacks along the way. The most important thing is to keep pushing and never give up on yourself. With these tips, you’re on your way to increased confidence and living your best life! Visit <a href="https://boostwellnessclinic.com/">boost wellness</a> for more health and wellness articles and to learn more about our services.   
+
+
+                <br><br>
+                </p>
+                        
+                   
+               
+                </div>
+                <div class="container">
+    <div class="row">
+        <!-- Button Positioned on the Left with Link -->
+        <div style="margin-left: 27px;">
+        <a href="blog5.html" class="btn btn-block" style="border-radius: 100px;background-color: #14A098; color: white; font-family: 'Cabin', sans-serif; width: 90px;">Back</a>
+        </div>
+    </div>
+</div>
+                
+            </div>
+
+            <!-- Right Column (Occupying 25%) -->
+            <div class="col-md-3 d-none d-md-block">
+    <div class="text-white p-4">
+        <h2 style="font-family: 'PT Serif', serif; font-size: 25px; color: #14A098;">Categories</h2>
+        <form action="#" method="get"> <!-- Replace '#' with your actual form action -->
+        <select id="categorySelect" name="category" onchange="window.location.href=this.value" style="font-family: 'Cabin', sans-serif; color: black;">
+                <option value="#" disabled selected style="font-family: 'Cabin', sans-serif;">Select a category</option>
+                <option value="blog.html" style="font-family: 'Cabin', sans-serif;">All Blogs</option>
+                <!-- Add more options as needed with corresponding values and links -->
+            </select>
+        </form>
+    </div>
+</div>
+
+        </div>
+    </div>
+
+
+
+
+    <footer class="text-light" style="background-color: #29817d; padding: 10px;">
+      <div class="container">
+        <div class="row text-center">
+    
+          <!-- First Column -->
+          <div class="col-md-4 col-sm-12 mb-4 mx-auto" style="margin-top: 1vw; ">
+            <img src="images/808.png" alt="Your Logo" style="width: 170px; height: 75px;">
+            <br><br>
+            <p style="text-align: center; font-family: 'Cabin', sans-serif; color: black; ">7070 Knight Ct, suite 1004<br>
+              Missouri City, TX 77459<br>
+              <strong style="font-family: Kudryashev Display Sans; font-size: 15px; color: white;">Phone</strong><br>
+              281-410-2210<br>
+              <strong style="font-family: Kudryashev Display Sans; font-size: 15px; color: white;">Email</strong><br>
+              Info@boostwellnessclinic.com
+            </p>
+            <h5 style="font-family: Kudryashev Display Sans; font-size: 25px; color: white;">
+              <strong>Share & Connect</strong>
+            </h5>
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-instagram"></a>
+          </div>
+    
+          <!-- Second Column -->
+          <div class="col-md-4 col-sm-12 mb-4 mx-auto" style="margin-top: 3.5vw; margin-bottom: 6vw;">
+            <h5 style="font-family: Kudryashev Display Sans; font-size: 25px; color: white; ">
+              <strong>Quick Links</strong>
+            </h5>
+            <ul class="list-unstyled" style="text-align: center;">
+            <li><a href="about.html" style="text-align: left; font-family: 'Cabin', sans-serif; color: black;">About</a></li>
+              <li><a href="blog.html" style="text-align: left; font-family: 'Cabin', sans-serif; color: black; ">Blog</a></li>
+              <li><a href="contact.html" style="text-align: left; font-family: 'Cabin', sans-serif; color: black;">Contact</a></li>
+              <li><a href="medical.html" style="text-align: left; font-family: 'Cabin', sans-serif; color: black; ">Medical Weight Loss</a></li>
+              <li><a href="life.html" style="text-align: left; font-family: 'Cabin', sans-serif; color: black; ">Lifestyle Medicine</a></li>
+              <li><a href="nutri.html" style="text-align: left; font-family: 'Cabin', sans-serif; color: black; ">IV Nutritional Therapy</a></li>
+              <li><a href="hormonetherapy.html" style="text-align: left; font-family: 'Cabin', sans-serif; color: black; ">Hormone Therapy</a></li>
+    
+            </ul>   
+          </div>
+    
+          <!-- Third Column -->
+          <div class="col-md-4 col-sm-12 mb-4 mx-auto" style="margin-top: 3.5vw">
+            <h5 style="font-family: Kudryashev Display Sans; font-size: 25px; color: white; ">
+              <strong>Business Hours</strong>
+            </h5>
+            <ul class="list-unstyled">
+              <li><a style="text-align: left; font-family: 'Cabin', sans-serif; color: black; ">By Appointment Only</a></li>
+              <li><a style="text-align: left; font-family: 'Cabin', sans-serif; color: black; ">Monday - CLOSED</a></li>
+              <li><a style="text-align: left; font-family: 'Cabin', sans-serif; color: black; ">Tuesday - CLOSED</a></li>
+              <li><a style="text-align: left; font-family: 'Cabin', sans-serif; color: black; ">Wednesday 9:00 am - 5:00 pm</a></li>
+              <li><a style="text-align: left; font-family: 'Cabin', sans-serif; color: black; ">Thursday - CLOSED</a></li>
+              <li><a style="text-align: left; font-family: 'Cabin', sans-serif; color: black; ">Friday 9:00 am - 5:00 pm</a></li>
+              <li><a style="text-align: left; font-family: 'Cabin', sans-serif; color: black; ">Saturday/Sunday - CLOSED</a></li>
+            </ul>
+          </div>
+    
+        </div>
+      </div>
+    </footer>
+    
+
+
+
+  </div>
+  <style>
+    .fa {
+      padding: 5px; /* Adjusted padding for smaller icons */
+      font-size: 15px; /* Adjusted font size for smaller icons */
+      width: 35px; /* Adjusted width for smaller icons */
+      border-radius: 50%;
+      text-align: center;
+      text-decoration: none;
+      margin: 5px;
+    }
+
+    .fa:hover {
+      opacity: 0.7;
+    }
+
+    .fa-facebook {
+      background: teal;
+      color: white;
+    }
+
+    .fa-twitter {
+      background: teal;
+      color: white;
+    }
+
+    .fa-instagram {
+      background: teal;
+      color: white;
+    }
+
+    footer {
+      background-color: #14A098;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 5px;
+    }
+
+
+    @media (min-width: 768px) {
+      /* Adjustments for bigger screens */
+      .fa {
+        font-size: 30px;
+        width: 50px;
+      }
+
+   
+
+    }
+  </style>
+
+<script>
+    // JavaScript code to handle dropdown toggle
+    document.addEventListener("DOMContentLoaded", function () {
+        var dropdownToggle = document.querySelector('.dropdown-toggle');
+        var dropdownMenu = document.querySelector('.dropdown-menu');
+
+        dropdownToggle.addEventListener('click', function () {
+            dropdownMenu.classList.toggle('show');
+        });
+
+        document.addEventListener('click', function (event) {
+            if (!dropdownToggle.contains(event.target) && !dropdownMenu.contains(event.target)) {
+                dropdownMenu.classList.remove('show');
+            }
+        });
+    });
+</script>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+
+</body>
+</html>
